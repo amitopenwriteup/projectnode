@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             steps {
-                sh 'docker login -u amitow -p Mminani029 amitow'
+                sh 'docker login -u amitow -p Mminani029'
                 sh 'docker tag my-test amitow/test/my-test:latest'
                 sh 'docker push amitow/test/my-test:latest'
             }
