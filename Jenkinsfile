@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'docker login -u amitow -p Mminani029'
                 sh 'docker tag my-test amitow/test/my-test:latest'
-                sh 'docker push amitow/test:my-test'
+                sh 'docker push amitow/test/my-test:latest'
             }
         }
         stage('Deploy to Kubernetes') {
